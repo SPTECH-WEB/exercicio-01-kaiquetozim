@@ -26,8 +26,7 @@ public class FaturaController {
     }
 
     @GetMapping
-    public ResponseEntity<List<Fatura>> getAll() {
-        List<Fatura> faturas = faturaRepository.findAll();
-        return ResponseEntity.ok().body(faturas);
+    public List<Fatura> listarTudo() {
+        return faturaService.listarTodos();
     }
 }
